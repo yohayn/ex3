@@ -28,3 +28,4 @@ Computing betweenes score for all nodes
 g$layout <- layout.fruchterman.reingold(g)
 plot(g)
 ```
+![str result Image](https://github.com/yohayn/ex3/images/sloan.PNG)
