@@ -29,5 +29,4 @@ betweeness <- betweenness(g)
 mb <- as.numeric(which(max(betweeness) == betweeness))
 V(g)[mb]
 ```
-![GitHub Logo](/images/sloan.JPG)
-Format: ![Alt Text](url)
+![sloan](https://github.com/yohayn/ex3/blob/master/Images/sloan.JPG)
