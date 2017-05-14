@@ -107,8 +107,10 @@ plot(g, vertex.label=NA)
 ```
 sizes(ebc)
 ```
+There are 7 communities. this is the size of each one:
 ![community sizes](https://github.com/yohayn/ex3/blob/master/Images/community_sizes.JPG)
 ```
 modularity(ebc)
 ```
+The modularity value is 0.5774221
 
