@@ -31,7 +31,7 @@ betweeness <- betweenness(g)
 mb <- as.numeric(which(max(betweeness) == betweeness))
 V(g)[mb]
 ```
-Sloan has the highest betweeness measure 
+**Sloan** has the highest betweeness measure 
 ![sloan](https://github.com/yohayn/ex3/blob/master/Images/sloan.JPG)
 
 Computing closeness score for all nodes and printing the character with the maximum closeness
@@ -42,7 +42,7 @@ mc <- as.numeric(which(max(closeness) == closeness))
 V(g)[mc]
 ```
 
-Torres has the highest closeness measure 
+**Torres** has the highest closeness measure 
 
 Computing	Eigencetor score for all nodes and printing the character with the maximum	Eigencetor
 
@@ -53,4 +53,4 @@ me <- as.numeric(which(max(vec) == vec))
 V(g)[me]
 ```
 
-Karev has the highest Eigencetor measure 
+**Karev** has the highest Eigencetor measure 
