@@ -23,8 +23,9 @@ plot(g)
 ```
 
 ## Setting a layout
-Computing betweenes score for all nodes
+Computing betweenes score for all nodes and printing the character with the maximum betweeness
 ```
-g$layout <- layout.fruchterman.reingold(g)
-plot(g)
+betweeness <- betweenness(g)
+mb <- as.numeric(which(max(betweeness) == betweeness))
+V(g)[mb]
 ```
