@@ -107,7 +107,7 @@ plot(g, vertex.label=NA)
 ```
 sizes(ebc)
 ```
-![sloan](https://github.com/yohayn/ex3/blob/master/Images/comunity_sizes.JPG)
+![community sizes](https://github.com/yohayn/ex3/blob/master/Images/community_sizes.JPG)
 ```
 modularity(ebc)
 ```
