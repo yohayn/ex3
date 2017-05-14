@@ -54,3 +54,8 @@ V(g)[me]
 ```
 
 **Karev** has the highest Eigencetor measure 
+
+## 1. b. Community Detection
+
+
+
