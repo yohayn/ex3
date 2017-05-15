@@ -105,7 +105,7 @@ The graph
 ```
 plot(g, vertex.label=NA)
 ```
-![community sizes](https://github.com/yohayn/ex3/blob/master/Images/Grivan-Newman algorithm graph.JPG)
+![community sizes](https://github.com/yohayn/ex3/blob/master/Images/Grivan-Newman_algorithm_graph.JPG)
 
 ```
 sizes(ebc)
