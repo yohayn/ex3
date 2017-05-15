@@ -62,18 +62,16 @@ ga.data <- read.csv('ga_edgelist.csv', header = T)
 g <- graph.data.frame(ga.data,directed = F)
 ```
  
- let's see if we have communities here using the 
- Grivan-Newman algorithm
- 1st we calculate the edge betweenness, merges, etc...
+**using Grivan-Newman algorithm**
+calculating the edges' betweenness
 ```
 ebc <- edge.betweenness.community(g, directed=F)
 memb<- membership(ebc)
 ```
 
- Now we have the merges/splits and we need to calculate the modularity
- for each merge for this we'll use a function that for each edge
+calculating modularity for each merge by using a function that for each edge
  removed will create a second graph, check for its membership and use
- that membership to calculate the modularity
+ that membership to calculate the modularity 
 ```
 mods <- sapply(0:ecount(g), function(i){
   g2 <- delete.edges(g, ebc$removed.edges[seq(length=i)])
@@ -82,27 +80,21 @@ mods <- sapply(0:ecount(g), function(i){
   
 })
 ```
+coloring the nodes
 
 ```
-g2 <- delete.edges(G, ebc$removed.edges[1:(which.max(mods)-1)])
-memberships$`Edge betweenness` <- clusters(g2)$membership
-
-```
- March 13, 2014 - compute modularity on the original graph g 
-
- we can now plot all modularities
-plot(mods, pch=20)
-
- 
- Now, let's color the nodes according to their membership
 g2<-delete.edges(g, ebc$removed.edges[seq(length=which.max(mods)-1)])
 V(g)$color=clusters(g2)$membership
+
+```
+
  
- Let's choose a layout for the graph
-g$layout <- layout.fruchterman.reingold
+
+ 
  
 The graph
 ```
+g$layout <- layout.fruchterman.reingold
 plot(g, vertex.label=NA)
 ```
 ![community sizes](https://github.com/yohayn/ex3/blob/master/Images/Grivan-Newman_algorithm_graph.JPG)
