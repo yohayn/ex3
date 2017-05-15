@@ -102,8 +102,10 @@ V(g)$color=clusters(g2)$membership
 g$layout <- layout.fruchterman.reingold
  
 The graph
+```
 plot(g, vertex.label=NA)
-![community sizes](Grivan-Newman algorithm graph.JPG)
+```
+![community sizes](https://github.com/yohayn/ex3/blob/master/Images/Grivan-Newman algorithm graph.JPG)
 
 ```
 sizes(ebc)
