@@ -126,9 +126,10 @@ sizes(wc)
 ```
 cluster_walktrap_graph.JPG
 There are 7 communities. this is the size of each one:
+
 ![walktrap community sizes](https://github.com/yohayn/ex3/blob/master/Images/walktrap_community_sizes.JPG)
 ```
 modularity(wc)
 ```
-The modularity value is 0.5774221
+The modularity value is 0.5147059
 
