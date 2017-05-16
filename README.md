@@ -97,7 +97,7 @@ The graph
 g$layout <- layout.fruchterman.reingold
 plot(g, vertex.label=NA)
 ```
-![community sizes](https://github.com/yohayn/ex3/blob/master/Images/Grivan-Newman_algorithm_graph.JPG)
+![Grivan-Newman graph](https://github.com/yohayn/ex3/blob/master/Images/Grivan-Newman_algorithm_graph.JPG)
 
 ```
 sizes(ebc)
@@ -106,6 +106,28 @@ There are 7 communities. this is the size of each one:
 ![community sizes](https://github.com/yohayn/ex3/blob/master/Images/community_sizes.JPG)
 ```
 modularity(ebc)
+```
+The modularity value is 0.5774221
+
+**using Walktrap community finding algorithm**
+creating the communities using the algorithm, and returning communities object
+```{r}
+wc <- cluster_walktrap(g)
+```
+the graph
+```
+plot(wc, g)
+```
+![Walktrap graph](https://github.com/yohayn/ex3/blob/master/Images/cluster_walktrap_graph.JPG)
+
+```
+sizes(wc)
+```
+cluster_walktrap_graph.JPG
+There are 7 communities. this is the size of each one:
+![community sizes](https://github.com/yohayn/ex3/blob/master/Images/walktrap_community_sizes.JPG)
+```
+modularity(wc)
 ```
 The modularity value is 0.5774221
 
