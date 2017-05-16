@@ -14,13 +14,6 @@ ga.data <- read.csv('ga_edgelist.csv', header = T)
 g <- graph.data.frame(ga.data,directed = F)
 ```
 
-## Setting a layout
-Choosing a layout scheme and plotting the networks.
-
-```
-g$layout <- layout.fruchterman.reingold(g)
-plot(g)
-```
 
 ## 1. a. Computing Centrality
 
