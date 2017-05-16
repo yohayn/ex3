@@ -103,6 +103,7 @@ plot(g, vertex.label=NA)
 sizes(ebc)
 ```
 There are 7 communities. this is the size of each one:
+
 ![community sizes](https://github.com/yohayn/ex3/blob/master/Images/community_sizes.JPG)
 ```
 modularity(ebc)
@@ -125,7 +126,7 @@ sizes(wc)
 ```
 cluster_walktrap_graph.JPG
 There are 7 communities. this is the size of each one:
-![community sizes](https://github.com/yohayn/ex3/blob/master/Images/walktrap_community_sizes.JPG)
+![walktrap community sizes](https://github.com/yohayn/ex3/blob/master/Images/walktrap_community_sizes.JPG)
 ```
 modularity(wc)
 ```
