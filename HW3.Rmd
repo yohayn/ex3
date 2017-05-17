@@ -57,7 +57,7 @@ ga.data <- read.csv('ga_edgelist.csv', header = T)
 g <- graph.data.frame(ga.data,directed = F)
 ```
  
-##using Grivan-Newman algorithm##
+###using Grivan-Newman algorithm
 calculating the edges' betweenness
 ```{r}
 ebc <- edge.betweenness.community(g, directed=F)
@@ -103,7 +103,7 @@ modularity(ebc)
 The modularity value is 0.5774221
 
 
-##using Walktrap community finding algorithm##
+###using Walktrap community finding algorithm
 creating the communities using the algorithm, and returning communities object
 ```{r}
 library(igraph)
