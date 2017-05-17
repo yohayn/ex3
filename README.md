@@ -233,6 +233,6 @@ me <- as.numeric(which(max(vec) == vec))
 V(g_twitter_actor)[me]
 ```
 
-**???** has the highest Eigencetor measure 
+ **trump** has the highest Eigencetor measure 
 
 
