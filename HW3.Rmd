@@ -18,7 +18,7 @@ g <- graph.data.frame(ga.data,directed = F)
 
 ## 1. a. Computing Centrality
 
-Computing betweenes score for all nodes and printing the character with the maximum betweeness
+Computing betweenes score for all nodes and printing the actor with the maximum betweeness
 
 ```{r}
 betweeness <- betweenness(g)
@@ -28,7 +28,7 @@ V(g)[mb]
 **Sloan** has the highest betweeness measure 
 ![sloan](https://github.com/yohayn/ex3/blob/master/Images/sloan.JPG)
 
-Computing closeness score for all nodes and printing the character with the maximum closeness
+Computing closeness score for all nodes and printing the actor with the maximum closeness
 
 ```{r}
 closeness <- closeness(g)
@@ -38,7 +38,7 @@ V(g)[mc]
 
 **Torres** has the highest closeness measure 
 
-Computing	Eigencetor score for all nodes and printing the character with the maximum	Eigencetor
+Computing	Eigencetor score for all nodes and printing the actor with the maximum	Eigencetor
 
 ```{r}
 evcent <- eigen_centrality(g)
