@@ -122,7 +122,6 @@ plot(wc, g)
 ```{r}
 sizes(wc)
 ```
-cluster_walktrap_graph.JPG
 There are 7 communities. this is the size of each one:
 
 ![walktrap community sizes](https://github.com/yohayn/ex3/blob/master/Images/walktrap_community_sizes.JPG)
