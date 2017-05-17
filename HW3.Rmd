@@ -134,7 +134,7 @@ The modularity value is 0.5147059
 
 
 
-2. ##Social Network Analysis
+## 2. Social Network Analysis
 Twitter Authentication
 ```{r}
 library(twitteR)
