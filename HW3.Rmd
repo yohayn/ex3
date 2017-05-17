@@ -160,24 +160,32 @@ a. We chose twitter's API to create a semantic network based on Donald Trump's t
 ```{r}
 #install.packages('SocialMediaLab')
 library(SocialMediaLab)
-#authinticating to twitter API
+```
+authinticating to twitter API
+```{r}
 TwitterToken <- Authenticate("twitter", apiKey=api_key, 
                           apiSecret=api_secret,
                           accessToken=access_token, 
                           accessTokenSecret=access_token_secret)
-# Collecting 150 tweets specifying the term "@realDonaldTrump" into a data frame object of class dataSource. 
+```
+Collecting 150 tweets specifying the term "@realDonaldTrump" into a data frame object of class dataSource. 
+```{r}
 myTwitterData<- Collect(searchTerm="@realDonaldTrump", numTweets=150, 
         writeToFile=FALSE,verbose=TRUE, credential=TwitterToken)
-class(myTwitterData)
+```
 
-#converting the tweets' text encodign to utf-8 
+converting the tweets' text encodign to utf-8 
+```{r}
+
 myTwitterData$text <- iconv(myTwitterData$text, to = 'utf-8')
-#creating a semantic network from the words found in the returned tweets.
+```
+creating a semantic network from the words found in the returned tweets.
+```{r}
 g_twitter_actor <- Create("Semantic", dataSource=myTwitterData)
 
 gsize(g_twitter_actor)
-
 ```
+
 b. there are 78 nodes in the network, each node represents a term, and each edge in the graph represents co-occurence of the terms connected to it in the same tweet.
 
 c.plotting of the graph:
