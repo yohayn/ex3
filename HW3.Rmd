@@ -180,13 +180,15 @@ gsize(g_twitter_actor)
 ```
 b. there are 78 nodes in the network, each node represents a term, and each edge in the graph represents co-occurence of the terms connected to it in the same tweet.
 
+c.plotting of the graph:
 ```{r}
-c.#plotting of the graph:
+
 library(igraph)
 par(mar = rep(2, 4))
 
 plot(g_twitter_actor)
 ```
+![Trunp graph](https://github.com/yohayn/ex3/blob/master/Images/Trump_Network.JPG)
 
 
 d.**Computing Centrality**
