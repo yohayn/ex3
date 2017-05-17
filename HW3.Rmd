@@ -196,12 +196,12 @@ par(mar = rep(2, 4))
 
 plot(g_twitter_actor)
 ```
-![Trunp graph](https://github.com/yohayn/ex3/blob/master/Images/Trump_Network.JPG)
+![Trump graph](https://github.com/yohayn/ex3/blob/master/Images/Trump_Network.JPG)
 
 
-d.**Computing Centrality**
+## d.Computing Centrality
 
-1.Computing betweenes score for all nodes and printing the character with the maximum betweeness
+1.Computing betweenes score for all nodes and printing the words with the maximum betweeness
 
 ```{r}
 betweeness <- betweenness(g_twitter_actor)
@@ -211,7 +211,7 @@ V(g_twitter_actor)[mb]
 ```
 **realdonaldtrump** has the highest betweeness measure 
 
-2.Computing closeness score for all nodes and printing the character with the maximum closeness
+2.Computing closeness score for all nodes and printing the words with the maximum closeness
 
 ```{r}
 closeness <- closeness(g_twitter_actor)
@@ -221,7 +221,7 @@ V(g_twitter_actor)[mc]
 
 **realdonaldtrump** has the highest closeness measure 
 
-3.Computing	Eigencetor score for all nodes and printing the character with the maximum	Eigencetor
+3.Computing	Eigencetor score for all nodes and printing the words with the maximum	Eigencetor
 
 ```{r}
 library(igraph)
