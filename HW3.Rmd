@@ -162,9 +162,9 @@ TwitterToken <- Authenticate("twitter", apiKey=api_key,
                           accessToken=access_token, 
                           accessTokenSecret=access_token_secret)
 ```
-Collecting 150 tweets specifying the term "@realDonaldTrump" into a data frame object of class dataSource. 
+Collecting 100 tweets specifying the term "@realDonaldTrump" into a data frame object of class dataSource. 
 ```{r}
-myTwitterData<- Collect(searchTerm="@realDonaldTrump", numTweets=150, 
+myTwitterData<- Collect(searchTerm="@realDonaldTrump", numTweets=100, 
         writeToFile=FALSE,verbose=TRUE, credential=TwitterToken)
 ```
 
@@ -180,7 +180,7 @@ g_twitter_actor <- Create("Semantic", dataSource=myTwitterData)
 gsize(g_twitter_actor)
 ```
 
-b. there are 78 nodes in the network, each node represents a term, and each edge in the graph represents co-occurence of the terms connected to it in the same tweet.
+b. there are 111 nodes in the network, each node represents a term, and each edge in the graph represents co-occurence of the terms connected to it in the same tweet.
 
 c.plotting of the graph:
 ```{r}

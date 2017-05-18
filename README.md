@@ -203,10 +203,10 @@ TwitterToken <- Authenticate("twitter", apiKey=api_key,
 
     ## [1] "Using direct authentication"
 
-Collecting 150 tweets specifying the term <%22@realDonaldTrump>" into a data frame object of class dataSource.
+Collecting 100 tweets specifying the term <%22@realDonaldTrump>" into a data frame object of class dataSource.
 
 ``` r
-myTwitterData<- Collect(searchTerm="@realDonaldTrump", numTweets=150, 
+myTwitterData<- Collect(searchTerm="@realDonaldTrump", numTweets=100, 
         writeToFile=FALSE,verbose=TRUE, credential=TwitterToken)
 ```
 
@@ -235,9 +235,9 @@ g_twitter_actor <- Create("Semantic", dataSource=myTwitterData)
 gsize(g_twitter_actor)
 ```
 
-    ## [1] 208
+    ## [1] 128
 
-1.  there are 78 nodes in the network, each node represents a term, and each edge in the graph represents co-occurence of the terms connected to it in the same tweet.
+1.  there are 128 nodes in the network, each node represents a term, and each edge in the graph represents co-occurence of the terms connected to it in the same tweet.
 
 c.plotting of the graph:
 
@@ -262,7 +262,7 @@ mb <- as.numeric(which(max(betweeness) == betweeness))
 V(g_twitter_actor)[mb]
 ```
 
-    ## + 2/70 vertices, named:
+    ## + 2/52 vertices, named:
     ## [1] realdonaldtrump trump
 
 **realdonaldtrump** has the highest betweeness measure
@@ -275,7 +275,7 @@ mc <- as.numeric(which(max(closeness) == closeness))
 V(g_twitter_actor)[mc]
 ```
 
-    ## + 2/70 vertices, named:
+    ## + 2/52 vertices, named:
     ## [1] realdonaldtrump trump
 
 **realdonaldtrump** has the highest closeness measure
@@ -290,7 +290,7 @@ me <- as.numeric(which(max(vec) == vec))
 V(g_twitter_actor)[me]
 ```
 
-    ## + 1/70 vertex, named:
+    ## + 1/52 vertex, named:
     ## [1] trump
 
 **trump** has the highest Eigencetor measure
