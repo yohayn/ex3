@@ -135,28 +135,7 @@ The modularity value is 0.5147059
 
 
 
-
 ## 2. Social Network Analysis
-Twitter Authentication
-```{r}
-library(twitteR)
-api_key <- "RtgqX9UgBAxe7t2IIM008bCQf"
- 
-api_secret <- "nHQb98Rqh1bbginMdbUyXQux4BKPekJgLyqXD6Z9cT8Wk2x8WB"
- 
-access_token <- "811597962870669312-LM03jdYMS6JlJkwrlDFxJsaCPLnTeKE"
- 
-access_token_secret <- "1uYRzKDIO1F2iK0bDYhGfki8pawHKzGMxQ3SJf8sPJAue"
- 
-setup_twitter_oauth(api_key,api_secret)
-```
-
-
-
-
-
-
-
 
 a. We chose twitter's API to create a semantic network based on Donald Trump's tweets. we used SocialMediaLab package to collect the tweets. In order to use the API we opened a twitter developer app. 
 ```{r}
