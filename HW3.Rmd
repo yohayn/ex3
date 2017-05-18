@@ -1,9 +1,16 @@
+---
+title: "ex3"
+author: "Amos Zamir"
+date: "May 18, 2017"
+output: github_document
+---
+
 # Exercise 3
 ## Environment setup
 
 
 ```{r}
-folder = 'C:/BG/H/Data Scientist/WorkSpace/HW3'
+folder = 'D:/Code/ex3'
 setwd(folder)
 
 ```
@@ -26,7 +33,6 @@ mb <- as.numeric(which(max(betweeness) == betweeness))
 V(g)[mb]
 ```
 **Sloan** has the highest betweeness measure 
-![sloan](https://github.com/yohayn/ex3/blob/master/Images/sloan.JPG)
 
 Computing closeness score for all nodes and printing the actor with the maximum closeness
 
@@ -90,14 +96,12 @@ The graph
 g$layout <- layout.fruchterman.reingold
 plot(g)
 ```
-![Grivan-Newman graph](https://github.com/yohayn/ex3/blob/master/Images/Grivan-Newman_algorithm_graph.JPG)
 
 ```{r}
 sizes(ebc)
 ```
 There are 7 communities. this is the size of each one:
 
-![community sizes](https://github.com/yohayn/ex3/blob/master/Images/community_sizes.JPG)
 ```{r}
 modularity(ebc)
 ```
@@ -117,14 +121,12 @@ the graph
 ```{r}
 plot(wc, g)
 ```
-![Walktrap graph](https://github.com/yohayn/ex3/blob/master/Images/cluster_walktrap_graph.JPG)
 
 ```{r}
 sizes(wc)
 ```
 There are 7 communities. this is the size of each one:
 
-![walktrap community sizes](https://github.com/yohayn/ex3/blob/master/Images/walktrap_community_sizes.JPG)
 ```{r}
 modularity(wc)
 ```
@@ -136,24 +138,16 @@ The modularity value is 0.5147059
 
 ## 2. Social Network Analysis
 Twitter Authentication
+
 ```{r}
-library(twitteR)
-api_key <- "RtgqX9UgBAxe7t2IIM008bCQf"
+api_key <- "03X3UAKKnYY9NxgFVjNffJnwT"
  
-api_secret <- "nHQb98Rqh1bbginMdbUyXQux4BKPekJgLyqXD6Z9cT8Wk2x8WB"
+api_secret <- "Y1uLISQfm1iBSf1My9YtBCgEj4qhYjlZJdCB3KcPmzASBxi4kb"
  
-access_token <- "811597962870669312-LM03jdYMS6JlJkwrlDFxJsaCPLnTeKE"
+access_token <- "857218802748190722-SAZwu7tMr4Ty2fQNZGMdrYNOUVjEg5y"
  
-access_token_secret <- "1uYRzKDIO1F2iK0bDYhGfki8pawHKzGMxQ3SJf8sPJAue"
- 
-setup_twitter_oauth(api_key,api_secret)
+access_token_secret <- "dPc4zX2H1EGUO9AnbXsQ1wvaH6q4lyPh7f3nIN8mljS5h"
 ```
-
-
-
-
-
-
 
 
 a. We chose twitter's API to create a semantic network based on Donald Trump's tweets. we used SocialMediaLab package to collect the tweets. In order to use the API we opened a twitter developer app. 
@@ -196,7 +190,6 @@ par(mar = rep(2, 4))
 
 plot(g_twitter_actor)
 ```
-![Trump graph](https://github.com/yohayn/ex3/blob/master/Images/Trump_Network.JPG)
 
 
 ## d.Computing Centrality
@@ -231,7 +224,7 @@ me <- as.numeric(which(max(vec) == vec))
 V(g_twitter_actor)[me]
 ```
 
-**???** has the highest Eigencetor measure 
+**trump** has the highest Eigencetor measure 
 
 
 
