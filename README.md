@@ -115,15 +115,16 @@ plot(g)
 
 ![](HW3_files/figure-markdown_github/unnamed-chunk-10-1.png)
 
+
 ``` r
 sizes(ebc)
 ```
+There are 7 communities. this is the size of each one:
 
     ## Community sizes
     ## 1 2 3 4 5 6 7 
     ## 8 5 4 4 5 3 3
 
-There are 7 communities. this is the size of each one:
 
 ``` r
 modularity(ebc)
@@ -155,12 +156,12 @@ plot(wc, g)
 ``` r
 sizes(wc)
 ```
+There are 7 communities. this is the size of each one:
 
     ## Community sizes
     ##  1  2  3  4  5  6  7 
     ##  5 13  3  3  2  3  3
 
-There are 7 communities. this is the size of each one:
 
 ``` r
 modularity(wc)
